@@ -20,8 +20,8 @@ int _strcmp(char *Sa, char *Sb)
 }
 
 /**
- * _sch - search if a char is inside a string
- * @s: string to review
+ * _sch - search for char
+ * @s: review string
  * @c: char to find
  * Return: 1 if success 0 if not
  */
@@ -83,4 +83,3 @@ char *_strtoky(char *s, char *d)
 	}
 	return (NULL);
 }
-
