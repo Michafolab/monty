@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- * _div - divides the second element by the top element in the stack
+ * _div - divides the second element by the top element of the stack
  *
  * @doubly: head of the linked list
  * @cline: line number;
@@ -20,14 +20,14 @@ void _div(stack_t **doubly, unsigned int cline)
 	if (m < 2)
 	{
 		dprintf(2, "L%u: can't div, stack too short\n", cline);
-		free_glo();
+		free_fglo();
 		exit(EXIT_FAILURE);
 	}
 
 	if ((*doubly)->n == 0)
 	{
 		dprintf(2, "L%u: division by zero\n", cline);
-		free_glo();
+		free_fglo();
 		exit(EXIT_FAILURE);
 	}
 
@@ -37,7 +37,7 @@ void _div(stack_t **doubly, unsigned int cline)
 }
 
 /**
- * _mul - multiplies the top element to the second top element in the stack
+ * _mul - multiplies the top element to the second top element of the stack
  *
  * @doubly: head of the linked list
  * @cline: line number;
@@ -56,7 +56,7 @@ void _mul(stack_t **doubly, unsigned int cline)
 	if (m < 2)
 	{
 		dprintf(2, "L%u: can't mul, stack too short\n", cline);
-		free_glo();
+		free_fglo();
 		exit(EXIT_FAILURE);
 	}
 
@@ -86,14 +86,14 @@ void _mod(stack_t **doubly, unsigned int cline)
 	if (m < 2)
 	{
 		dprintf(2, "L%u: can't mod, stack too short\n", cline);
-		free_glo();
+		free_fglo();
 		exit(EXIT_FAILURE);
 	}
 
 	if ((*doubly)->n == 0)
 	{
 		dprintf(2, "L%u: division by zero\n", cline);
-		free_glo();
+		free_fglo();
 		exit(EXIT_FAILURE);
 	}
 
@@ -113,13 +113,13 @@ void _pchar(stack_t **doubly, unsigned int cline)
 	if (doubly == NULL || *doubly == NULL)
 	{
 		dprintf(2, "L%u: can't pchar, stack empty\n", cline);
-		free_glo();
+		free_fglo();
 		exit(EXIT_FAILURE);
 	}
 	if ((*doubly)->n < 0 || (*doubly)->n >= 128)
 	{
 		dprintf(2, "L%u: can't pchar, value out of range\n", cline);
-		free_glo();
+		free_fglo();
 		exit(EXIT_FAILURE);
 	}
 	printf("%c\n", (*doubly)->n);
