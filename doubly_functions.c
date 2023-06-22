@@ -1,7 +1,7 @@
 #include "monty.h"
 
 /**
- *add_dnodeint_end - add a note at the end of the doubly link list
+ *add_dnodeint_end - add a node at the end of the doubly link list
  *@head: first position of linked list
  *@n: data to store
  *Return: a doubly linked list
@@ -16,7 +16,7 @@ stack_t *add_dnodeint_end(stack_t **head, const int n)
 	if (!temp)
 	{
 		dprintf(2, "Error: malloc failed\n");
-		free_glo();
+		free_fglo();
 		exit(EXIT_FAILURE);
 	}
 	temp->n = n;
@@ -53,7 +53,7 @@ stack_t *add_dnodeint(stack_t **head, const int n)
 	if (!temp)
 	{
 		dprintf(2, "Error: malloc failed\n");
-		free_glo();
+		free_fglo();
 		exit(EXIT_FAILURE);
 	}
 	temp->n = n;
