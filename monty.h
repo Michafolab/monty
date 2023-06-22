@@ -10,9 +10,9 @@
 #include <ctype.h>
 
 /**
- * struct stack_s - doubly linked list  of a stack (or queue)
+ * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
- * @prev: points to the previous element of stack (or queue)
+ * @prev: points to the previous element of the stack (or queue)
  * @next: points to the next element of the stack (or queue)
  *
  * Description: doubly linked list node structure
@@ -31,7 +31,7 @@ typedef struct stack_s
  * @cont: current line
  * @arg: second parameter inside the current line
  * @head: doubly linked list
- * @fd: file descriptor
+ * @fdt: file descriptor
  * @buffer: input text
  *
  * Description: doubly linked list node structure
@@ -43,7 +43,7 @@ typedef struct globals
 	unsigned int cont;
 	char  *arg;
 	stack_t *head;
-	FILE *fd;
+	FILE *fdt;
 	char *buffer;
 } global_t;
 
@@ -53,7 +53,7 @@ typedef struct globals
  * @f: function to handle the opcode
  *
  * Description: opcode and its function
- * for stack, queues, LIFO, FIFO ALX  project
+ * for stack, queues, LIFO, FIFO ALX project
  */
 typedef struct instruction_s
 {
@@ -61,7 +61,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-extern global_t vglo;
+extern global_t glo;
 
 /* opcode_instructuions*/
 void _push(stack_t **stack, unsigned int line_number);
@@ -98,6 +98,7 @@ stack_t *add_dnodeint(stack_t **head, const int n);
 void free_dlistint(stack_t *head);
 
 /* main */
-void free_vglo(void);
+void free_glo(void);
 
 #endif
+
