@@ -1,6 +1,11 @@
 #ifndef MONTY
 #define MONTY
 
+<<<<<<< HEAD
+=======
+#define global_t fglo
+
+>>>>>>> 40698ca606c8200f55a083ae776259669de46627
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
