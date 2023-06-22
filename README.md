@@ -95,7 +95,10 @@ monty executes the following opcodes:
 
 
 
+
 4)    pop                                                                          Removes the top element of the stack
+
+
 
 
 
@@ -105,7 +108,11 @@ monty executes the following opcodes:
 
 
 
+
+
 6) queue	 **                                                                     Sets the format of the data to a queue (FIFO)
+
+
 
 
 
@@ -115,7 +122,12 @@ monty executes the following opcodes:
 
 
 
+
+
 8) nop   **                                                                      Doesn't do anything
+
+
+
 
 
 
@@ -123,7 +135,14 @@ monty executes the following opcodes:
 9) add**	                                                                        Adds the top two elements of the stack
 
 
+
+
+
+
 10)  sub**	                                                                       Subtracts the top element of the stack from the second top element of the stack
+
+
+
 
 
 
@@ -133,11 +152,17 @@ monty executes the following opcodes:
 
 
 
+
+
 12)  div	**                                                                       Divides the second top element of the stack by the top element of the stack
 
 
 
+
+
 13)  mod	   **                                                                    Computes the rest of the division of the second top element of the stack by the top element of the stack
+
+
 
 
 
@@ -147,12 +172,21 @@ monty executes the following opcodes:
 
 
 
+
+
 15)  pstr **                                                                   	Prints the string starting at the top of the stack
 
 
 
 
+
+
+
 16)  rotl**	                                                                    Rotates the stack to the top
+
+
+
+
 
 
 
