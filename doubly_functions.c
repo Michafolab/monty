@@ -1,5 +1,5 @@
 #include "monty.h"
-
+#include <stdio.h>
 /**
  *add_dnodeint_end - add a node at the end of the doubly link list
  *@head: first position of linked list
