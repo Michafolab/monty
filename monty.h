@@ -1,7 +1,7 @@
 #ifndef MONTY
 #define MONTY
 
-#define global_t glo;
+#define global_t glo
 
 #include <stdio.h>
 #include <stdlib.h>
