@@ -1,38 +1,38 @@
 #include "monty.h"
 
 /**
- * _push - pushes an element to the stack
+ * _push - Thia pushes an element to the stack
  *
- * @doubly: head of the linked list
- * @cline: line number
+ * @doubly: The head of the linked list
+ * @cline: The line number
  * Return: no return
  */
 void _push(stack_t **doubly, unsigned int cline)
 {
 	int n, j;
 
-	if (!glo.arg)
+	if (!fglo.arg)
 	{
 		dprintf(2, "L%u: ", cline);
 		dprintf(2, "usage: push integer\n");
-		free_glo();
+		free_fglo();
 		exit(EXIT_FAILURE);
 	}
 
-	for (j = 0; glo.arg[j] != '\0'; j++)
+	for (j = 0; fglo.arg[j] != '\0'; j++)
 	{
-		if (!isdigit(glo.arg[j]) && glo.arg[j] != '-')
+		if (!isdigit(fglo.arg[j]) && fglo.arg[j] != '-')
 		{
 			dprintf(2, "L%u: ", cline);
 			dprintf(2, "usage: push integer\n");
-			free_glo();
+			free_fglo();
 			exit(EXIT_FAILURE);
 		}
 	}
 
-	n = atoi(glo.arg);
+	n = atoi(fglo.arg);
 
-	if (glo.lifo == 1)
+	if (fglo.lifo == 1)
 		add_dnodeint(doubly, n);
 	else
 		add_dnodeint_end(doubly, n);
@@ -74,7 +74,7 @@ void _pint(stack_t **doubly, unsigned int cline)
 	{
 		dprintf(2, "L%u: ", cline);
 		dprintf(2, "can't pint, stack empty\n");
-		free_glo();
+		free_fglo();
 		exit(EXIT_FAILURE);
 	}
 
@@ -95,7 +95,7 @@ void _pop(stack_t **doubly, unsigned int cline)
 	if (doubly == NULL || *doubly == NULL)
 	{
 		dprintf(2, "L%u: can't pop an empty stack\n", cline);
-		free_glo();
+		free_fglo();
 		exit(EXIT_FAILURE);
 	}
 	aux = *doubly;
@@ -123,7 +123,7 @@ void _swap(stack_t **doubly, unsigned int cline)
 	if (m < 2)
 	{
 		dprintf(2, "L%u: can't swap, stack too short\n", cline);
-		free_glo();
+		free_fglo();
 		exit(EXIT_FAILURE);
 	}
 
