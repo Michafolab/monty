@@ -80,59 +80,90 @@ monty executes the following opcodes:
 **Opcode**	            ****************************                           ** Description**
 
 
-**push**	                                                                      Pushes an element to the stack
+1)     push	                                                                      Pushes an element to the stack
 
 
-**pall**	                                                                      Prints all the values on the stack
 
 
-**pint	**                                                                      Prints the value at the top of the stack
+2)     pall**	                                                                      Prints all the values on the stack
 
 
-**pop   **                                                                      Removes the top element of the stack
 
 
-**swap	**                                                                      Swaps the top two elements of the stack
+3)     pint	**                                                                      Prints the value at the top of the stack
 
 
-**queue	 **                                                                     Sets the format of the data to a queue (FIFO)
 
 
-**stack**	                                                                      Sets the format of the data to a stack (LIFO)
+4)    pop                                                                          Removes the top element of the stack
 
 
-**nop   **                                                                      Doesn't do anything
 
 
-**add**	                                                                        Adds the top two elements of the stack
+5)   swap	**                                                                      Swaps the top two elements of the stack
 
 
-**sub**	                                                                       Subtracts the top element of the stack from the second top element of the stack
 
 
-**mul	 **                                                                      Multiplies the second top element of the stack with the top element of the stack
+6) queue	 **                                                                     Sets the format of the data to a queue (FIFO)
 
 
-**div	**                                                                       Divides the second top element of the stack by the top element of the stack
 
 
-**mod	   **                                                                    Computes the rest of the division of the second top element of the stack by the top element of the stack
+7) stack**	                                                                      Sets the format of the data to a stack (LIFO)
 
 
-**pchar	  **                                                                   Prints the char at the top of the stack
 
 
-**pstr **                                                                   	Prints the string starting at the top of the stack
+8) nop   **                                                                      Doesn't do anything
 
 
-**rotl**	                                                                    Rotates the stack to the top
 
 
-**rotr**	                                                                    Rotates the stack to the bottom
+9) add**	                                                                        Adds the top two elements of the stack
+
+
+10)  sub**	                                                                       Subtracts the top element of the stack from the second top element of the stack
+
+
+
+
+11) mul	 **                                                                      Multiplies the second top element of the stack with the top element of the stack
+
+
+
+
+12)  div	**                                                                       Divides the second top element of the stack by the top element of the stack
+
+
+
+13)  mod	   **                                                                    Computes the rest of the division of the second top element of the stack by the top element of the stack
+
+
+
+
+14)  pchar	  **                                                                   Prints the char at the top of the stack
+
+
+
+
+15)  pstr **                                                                   	Prints the string starting at the top of the stack
+
+
+
+
+16)  rotl**	                                                                    Rotates the stack to the top
+
+
+
+
+17)  rotr**	                                                                    Rotates the stack to the bottom
 
 
 *******************************************************************************************************************************
-Comments, indicated with #, are not executed by the interpreter.
+**Comments,**
+
+indicated with #, are not executed by the interpreter.
 
 When a nonextistent opcode is passed, the interpreter prints an error message and stops:
 
