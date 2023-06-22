@@ -35,7 +35,7 @@ typedef struct stack_s
  * @buffer: input text
  *
  * Description: doubly linked list node structure
- * for stack, queues, LIFO, FIFO Holberton project
+ * for stack, queues, LIFO, FIFO ALX project
  */
 typedef struct globals
 {
@@ -53,7 +53,7 @@ typedef struct globals
  * @f: function to handle the opcode
  *
  * Description: opcode and its function
- * for stack, queues, LIFO, FIFO Holberton project
+ * for stack, queues, LIFO, FIFO ALX project
  */
 typedef struct instruction_s
 {
@@ -90,7 +90,7 @@ int _sch(char *s, char c);
 char *_strtoky(char *s, char *d);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 void *_calloc(unsigned int nmemb, unsigned int size);
-int _strcmp(char *s1, char *s2);
+int _strcmp(char *Sa, char *Sb);
 
 /* doubly linked list functions */
 stack_t *add_dnodeint_end(stack_t **head, const int n);
