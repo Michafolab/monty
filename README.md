@@ -1,5 +1,8 @@
-**monty is an interpreter of Monty ByteCodes files, which is a scripting language just like Python**
 **0x19. C - Stacks, Queues - LIFO, FIFO**
+
+
+
+**monty is an interpreter of Monty ByteCodes files, which is a scripting language just like Python**
 
 ![image](https://github.com/Michafolab/monty/assets/117805721/b941001b-184d-435f-b21b-bfd01bb91a9c)
 
