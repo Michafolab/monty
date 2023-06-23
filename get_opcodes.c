@@ -1,41 +1,52 @@
 #include "monty.h"
-
 /**
- * get_opcodes - selects the correct opcode to perform
- *
- * @opc: opcode passed
- *
- * Return: pointer to the function that executes the opcode
+ * execute - executes the opcode
+ * @stack: head linked list - stack
+ * @counter: line_counter
+ * @file: poiner to monty file
+ * @content: line content
+ * Return: no return
  */
-void (*get_opcodes(char *opc))(stack_t **stack, unsigned int line_number)
+int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 {
-	instruction_t instruct[] = {
-		{"push", _push},
-		{"pall", _pall},
-		{"pint", _pint},
-		{"pop", _pop},
-		{"swap", _swap},
-		{"queue", _queue},
-		{"stack", _stack},
-		{"add", _add},
-		{"nop", _nop},
-		{"sub", _sub},
-		{"mul", _mul},
-		{"div", _div},
-		{"mod", _mod},
-		{"pchar", _pchar},
-		{"pstr", _pstr},
-		{"rotl", _rotl},
-		{"rotr", _rotr},
+	instruction_t opst[] = {
+		{"push", f_push}, {"pall", f_pall}, {"pint", f_pint},
+		{"pop", f_pop},
+		{"swap", f_swap},
+		{"add", f_add},
+		{"nop", f_nop},
+		{"sub", f_sub},
+		{"div", f_div},
+		{"mul", f_mul},
+		{"mod", f_mod},
+		{"pchar", f_pchar},
+		{"pstr", f_pstr},
+		{"rotl", f_rotl},
+		{"rotr", f_rotr},
+		{"queue", f_queue},
+		{"stack", f_stack},
 		{NULL, NULL}
 	};
-	int i;
+	unsigned int i = 0;
+	char *op;
 
-	for (i = 0; instruct[i].opcode; i++)
+	op = strtok(content, " \n\t");
+	if (op && op[0] == '#')
+		return (0);
+	bus.arg = strtok(NULL, " \n\t");
+	while (opst[i].opcode && op)
 	{
-		if (_strcmp(instruct[i].opcode, opc) == 0)
-			break;
+		if (strcmp(op, opst[i].opcode) == 0)
+		{	opst[i].f(stack, counter);
+			return (0);
+		}
+		i++;
 	}
-
-	return (instruct[i].f);
+	if (op && opst[i].opcode == NULL)
+	{ fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
+		fclose(file);
+		free(content);
+		free_stack(*stack);
+		exit(EXIT_FAILURE); }
+	return (1);
 }
