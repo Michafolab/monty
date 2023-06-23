@@ -7,6 +7,11 @@
  */
 #define BUFFER_SIZE 1024
 
+<<<<<<< HEAD
+=======
+const bus_t bus = {NULL, NULL, NULL, 0};
+
+>>>>>>> 51de2e9d1d0c63b55951281e8fd53b4f93ca8cc2
 int main(int argc, char *argv[])
 {
 	bus_t bus = {NULL, NULL, NULL, 0};
@@ -36,5 +41,9 @@ int main(int argc, char *argv[])
 	}
 	free_stack(stack);
 	fclose(file);
+<<<<<<< HEAD
 	return (0);
+=======
+	return(0);
+>>>>>>> 51de2e9d1d0c63b55951281e8fd53b4f93ca8cc2
 }
