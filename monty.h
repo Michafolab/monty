@@ -8,6 +8,7 @@
 #include <string.h>
 #include <ctype.h>
 
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -17,6 +18,7 @@
  * Description: doubly linked list node structure
  * for stack, queues, LIFO, FIFO ALX project
  */
+
 typedef struct stack_s
 {
 	int n;
