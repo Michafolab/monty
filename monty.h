@@ -45,7 +45,7 @@ typedef struct globals
 	stack_t *head;
 	FILE *fd;
 	char *buffer;
-};
+} global_t;
 
 /**
  * struct instruction_s - opcode and its function
@@ -59,7 +59,7 @@ typedef struct instruction_s
 {
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
-};
+} instruction_t;
 
 extern global_t vglo;
 
