@@ -3,7 +3,7 @@
 
 #define BUFFER_SIZE 1024
 
-bus_t bus = {NULL, NULL, NULL, 0};
+const bus_t bus = {NULL, NULL, NULL, 0};
 
 int main(int argc, char *argv[])
 {
@@ -33,5 +33,5 @@ int main(int argc, char *argv[])
 	}
 	free_stack(stack);
 	fclose(file);
-	return 0;
+	return(0);
 }
