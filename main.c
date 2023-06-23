@@ -1,12 +1,15 @@
 #include "monty.h"
 #include <stdio.h>
-
+/**
+ * main - entry point
+ *
+ * return : always success
+ */
 #define BUFFER_SIZE 1024
-
-bus_t bus = {NULL, NULL, NULL, 0};
 
 int main(int argc, char *argv[])
 {
+	bus_t bus = {NULL, NULL, NULL, 0};
 	char *content = NULL;
 	FILE *file;
 	char buffer[BUFFER_SIZE];
@@ -33,5 +36,5 @@ int main(int argc, char *argv[])
 	}
 	free_stack(stack);
 	fclose(file);
-	return 0;
+	return (0);
 }
