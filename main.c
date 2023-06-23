@@ -3,8 +3,6 @@
 
 #define BUFFER_SIZE 1024
 
-bus_t bus = {NULL, NULL, NULL, 0};
-
 int main(int argc, char *argv[])
 {
     char *content = NULL;
