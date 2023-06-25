@@ -37,7 +37,7 @@ void _div(stack_t **doubly, unsigned int cline)
 }
 
 /**
- * _mul - multiplies the top element to the second top element of the stack
+ * _mul - multiply the top element to the second top element of the stack
  *
  * @doubly: head of the linked list
  * @cline: line number;
